@@ -1,6 +1,7 @@
 ﻿using BankConsole.Data;
 using BankConsole.Models;
 
+//Indeholder Bank1 og Bank2 pga et fuckop der skete med github
 
 ///TODO:
 /// * FIX SÅ DEN IKKE CRASHER NÅR DU TRYKKER ENTER
