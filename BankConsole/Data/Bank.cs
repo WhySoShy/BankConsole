@@ -15,7 +15,7 @@ namespace BankConsole.Data
         public Account CreateAccount(string name)
         {
             if (AccountList.Any(x => x.Name.ToLower() == name.ToLower()))
-                throw new Exception();
+                throw new Exception("Bruger eksistere allerede");
             Account account = new()
             {
                 Balance = 0,
