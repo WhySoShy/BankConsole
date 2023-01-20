@@ -24,7 +24,7 @@ class Program
             menuItems.Add('C', "Hæv");
             menuItems.Add('D', "Vis saldo");
             menuItems.Add('E', "Vis bank");
-            menuItems.Add('F', "Charge interest");
+            menuItems.Add('F', "Hent renter");
             menuItems.Add('G', "Hvis alle kontier");
             menuItems.Add('H', "Vis Log");
             menuItems.Add('I', "Log ud");
@@ -58,16 +58,12 @@ class Program
 
         void Startup()
         {
-
             decimal amount = 0;
             Account loggedInAs = null;
             string name = String.Empty;
 
-            //bank.CreateAccount("test");
-
             while (true)
             {
-                
                 Console.Clear();
                 if (loggedInAs == null)
                 {
@@ -124,9 +120,6 @@ class Program
                     case ConsoleKey.G:
                         foreach (var item in bank.AccountList)
                             Console.WriteLine($"Kontornr: {item.AccountID}\n Navn: {item.Name}\n KontoType: {(AccountType) Enum.ToObject(typeof(AccountType), item.AccountID)} konto\n Saldo: {item.Balance} \n-------");
-                        break;
-                    case ConsoleKey.X:
-                        loggedInAs = null;
                         break;
                     case ConsoleKey.F:
                         bank.ChargeInterest();
