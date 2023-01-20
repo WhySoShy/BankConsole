@@ -22,3 +22,15 @@ Projektet består af 9 forskellige klasser.
   
   #### Util:
   * FileLogger <br/>
+
+
+#### Konto typer:
+ * Løn konto
+  * Giver 5% i rente
+ * Opsparings konto
+  * 1% i rente under 50kr
+  * 2% i rente under 100kr
+  * 3% i rente over 100kr 
+ * Forbrugs konto
+  * 0.1% i rente hvis kontoen ikke er i minus
+  * -20% hvis kontoen er i minus
